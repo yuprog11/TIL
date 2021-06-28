@@ -1,0 +1,47 @@
+配列の書き方、配列自身もオブジェクト。オブジェクトの種類のことをクラスという。配列は整数、少数、文字列オブジェクト入れれる
+配列の英語名は？                                                            array
+
+配列を代入する変数名は〇〇形にする。                                             複数　s       sugars = ["白砂糖","三温糖","角砂糖"]
+                                                                                     names　= ["taro","huzino","yamada"]
+                                                                                     
+drinks = ["コーヒー"]
+drinks.push("カフェラテ")
+p drinks
+
+drinks.unshift("モカ")
+p drinks
+
+drinks << "ティーラテ"
+p drinks
+
+drinks = ["コーヒー","コーラ","麦茶"] 
+drinks.pop ←役割は
+p drinks 
+drinks.shift　←役割は
+p drinks
+
+a1 = [2,5,4]
+a2 = [5,8,4]
+p a1 + a2 ←結果どうなる
+
+a1 = [2,5,4,45,8,6]
+a2 = [5,8,4,8,5,6,4,5]
+p a1 - a2 ←結果どうなる
+
+menu = ["カフェラテ","肉","魚"]
+ordered = ["カフェラテ","魚"]
+p not_ordered = menu - ordered
+
+drinks = ["コーヒー","カフェラテ"]
+drinks.each do |drink|
+  puts drink
+end
+
+[1,2,3].each do |x|
+  break if x == 2
+  puts x
+end
+↑next が入るとどうなる？
+
+
+
