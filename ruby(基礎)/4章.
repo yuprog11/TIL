@@ -1,0 +1,78 @@
+配列　p [“田中”, ”佐藤” ,”マイケル” ]的な　
+配列に変数をつけるメリットは？その呼び方は？書き方の慣習は？　		　配列に名札をつけることができる　drinks = ["mattya","お茶","1お茶”]この例だと配列drinks　複数形で書く　drinks=[,,] names=[]とか
+ 
+Firstメソッド、lastメソッドとは、書き方は？　                 [0].[2]とかと同じ　最初と最後の取り出し　puts　drinks.firstとか
+								                                	-2.-1
+drinks = ["mattya","お茶","1お茶","taro"]						
+puts drinks.first                                最初のオブジェクトをとる
+puts drinks.last                                  最後のオブジェクトをとる
+
+
+puts drinks[-4]                                   mattya
+puts drinks[-3]                                   お茶
+puts drinks[-2]                                   1お茶
+puts drinks[-1]							どういう表記になる？        taro
+
+
+配列に要素追加するやり方は？pushメソッドとunshiftメソッド　　　　                  	drinks = ["mattya","お茶","1お茶","taro"]	
+														                                      drinks.push(“カフェラテ”)##drinks << “カフェラテ”でも同様の結果
+														                                      p drinks 
+														                                      #=>[“mattya", "お茶", "1お茶", "taro", "カフェラテ"]
+														
+														                                      drinks = ["mattya","お茶","1お茶","taro"]
+														                                      drinks.unshift("カフェラテ”) 
+														                                      p drinks
+														                                      #=>["カフェラテ", "mattya", "お茶", "1お茶", "taro"]													
+
+配列に要素を削除するやり方は？popメソッドとshiftメソッド			
+														                                      drinks = ["mattya","お茶","1お茶","taro"]
+														                                      drinks.pop
+														                                      p drinks
+														                                      #=>["mattya", "お茶", "1お茶"]
+
+														                                      drinks = ["mattya","お茶","1お茶","taro"]
+														                                      drinks.shift
+														                                      p drinks
+														                                      #=>["お茶", "1お茶", "taro"]
+                                                                  
+drinks = ["mattya","お茶","1お茶","taro"]
+p drinks.pop
+p drinks.shift				どういう結果、挙動になる？			                     “mattya”
+
+														
+a1　= [1,2,3]
+a2　= [5.6]													                              ファイル名.rb
+p a1 + a2 　どうなる？										                             [1,2,3,5,6]
+
+a1= [1,2,3]
+a2= [1,3,5]                                                      ファイル名.rb
+p= a1 - a2  どうなる？                                               [2]
+
+menu = ["牛丼","サラダ","おにぎり","タコライス","こんにゃく"]
+ordered = ["牛丼","サラダ","こんにゃく"]
+p menu - ordered             どうなる？                             ["おにぎり","タコライス"]
+
+
+drinks = ["カフェラテ","コーヒー”]
+drinks.each do | drink |
+  puts drink
+end                          どうなる？　　                            ファイル名.rb
+                                                                  コーヒー
+                                                                  カフェラテ
+                                                    
+| drink |　変数？定数？                                               変数小文字だし
+
+  
+each使わなくてもputs　drinks[0]とかでとれる　each使うメリットは？　        中身が増えた時プログラム自体を書き換えなきゃだけど（puts drink[0]のとこ）
+                                                          
+
+配列でのbreak、nextの動作
+
+配列の変数は複数形、繰り返しの変数は単数形　なぜ？                     each繰り返しは一個ずつ入れて処理するから単数、配列は箱の中に色々入ってるから複数
+
+
+メソッド
+  sizeメソッド                                                配列の要素数を得る　要素とは？　puts[2,4,6]
+  sumメソッド
+  firstメソッドlastメソッド
+  メソッドを調べる..リファレンスマニュアル
