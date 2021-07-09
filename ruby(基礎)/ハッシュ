@@ -1,0 +1,44 @@
+:taro                 シンボルオブジェクト（シンボルそのもの）
+:taro => 200          一つの書き方
+taro: 200             主流の書き方でシンボルを ！！ 使ったとき！！に使える書き方
+
+
+ハッシュ  普通の書き方　:taro => 520 新しい書き方  taro: 520
+:taro の部分なんという？                                              シンボル、でオブジェクト　クラスめいsymbol
+
+to_s,to_sym でしんぼるから文字列へ、文字列からシンボルへ変換できる
+
+
+p({:taro=> 200, :suzuki=> : 500 })  
+   キー   値     キー        値
+
+p({taro: 200, suzuki: 500 })                                    シンボル（:menuとか）を使ったときにだけ使える書き方、主流の書き方
+   キー   値     キー    値
+   
+変数の代入の仕方                                                  menu = {taro: 520, suzuki: 850}
+                                                                p menu #={taro: 520, suzuki: 850}
+
+ハッシュから値の取得の仕方                                         menu = {taro: 520, suzuki: 850}
+                                                             p menu[:taro] ←キーのシンボルの書き方　#=>520
+                                                             
+                                                             
+ ハッシュにキーと値を追加                                         menu = {taro: 520, suzuki: 850}
+                                                            menu[:tama] = 600
+ 
+ 同じキーを打つと上書き
+ 存在しないキーを打つとnilが返る
+ 
+ 2つのハッシュを一つにまとめる                                      drinkmenu = { tea:200, cola: 100}
+                                                            foodmenu = {cookie: 200 meat: 500}
+                                                            menu = drinkmenu.merge(foodmenu)
+                                                            p menu #>混ざる
+ 
+ ハッシュからキーと値の削除の仕方は?                               drinkmenu = { tea:200, cola: 100}
+                                                           drinkmenu.delete(:tea)
+                                                           
+ 繰り返し処理                                                 drinkmenu = { tea:200, cola: 100}
+                                                           drinkmenu.each do |x,y|
+                                                           puts "#{x}は#{y}円です"
+                                                           end
+                                                           
+                      
